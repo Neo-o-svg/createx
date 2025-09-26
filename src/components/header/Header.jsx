@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -12,26 +12,28 @@ export default function Header() {
       <div className="container">
         <div className="header__wrapper">
           <div className="header__left">
-            <a href="!#" className="header__logo">
+            <Link className="header__logo" to="/">
               <img src="src/img/icons/logo.svg" alt="Createx" />
-            </a>
+            </Link>
 
             <nav className="header__nav">
               <ul className="header__nav-list">
                 <li>
-                  <a href="!#">About Us</a>
+                  <Link to="/about-us">About Us</Link>
                 </li>
                 <li>
-                  <a href="!#">Services</a>
+                  <Link to="/services">Services</Link>
                 </li>
                 <li>
-                  <a href="!#">Work</a>
+                  <Link to="work" href="!#">
+                    Work
+                  </Link>
                 </li>
                 <li>
-                  <a href="!#">News</a>
+                  <Link to="news">News</Link>
                 </li>
                 <li>
-                  <a href="!#">Contacts</a>
+                  <Link to="contacts">Contacts</Link>
                 </li>
               </ul>
             </nav>
@@ -60,9 +62,9 @@ export default function Header() {
           {/* Выезжающее меню */}
           <div className={`header__menu ${menuOpen ? "active" : ""}`}>
             <div className="header__menu-top">
-              <a href="!#" className="header__logo">
+              <Link to="/" className="header__logo">
                 <img src="src/img/icons/logo-white.svg" alt="Createx" />
-              </a>
+              </Link>
               <div className="header__icons">
                 <a href="tel:4055550128">
                   <img src="src/img/icons/iPhone.svg" alt="phone" />
@@ -75,19 +77,21 @@ export default function Header() {
             <nav className="header__menu-nav">
               <ul>
                 <li>
-                  <a href="!#">About Us</a>
+                  <Link to="/about-us">About Us</Link>
                 </li>
                 <li>
-                  <a href="!#">Services</a>
+                  <Link to="/services">Services</Link>
                 </li>
                 <li>
-                  <a href="!#">Work</a>
+                  <Link to="work" href="!#">
+                    Work
+                  </Link>
                 </li>
                 <li>
-                  <a href="!#">News</a>
+                  <Link to="news">News</Link>
                 </li>
                 <li>
-                  <a href="!#">Contacts</a>
+                  <Link to="contacts">Contacts</Link>
                 </li>
               </ul>
             </nav>

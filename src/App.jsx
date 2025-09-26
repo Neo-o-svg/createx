@@ -1,33 +1,29 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./styles/styles.css";
 import Header from "./components/header/Header";
-import About from "./components/about/About";
-import We from "./components/we/We";
-import Our from "./components/our/Our";
-import Service from "./components/service/Service";
-import Browse from "./components/browse/Browse";
-import Support from "./components/support/Support";
-import Clients from "./components/clients/Clients";
-import Some from "./components/some/Some";
-import News from "./components/news/News";
-import ContactForm from "./components/сontactForm/ContactForm";
 import Footer from "./components/footer/Footer";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import Contacts from "./pages/Contacts";
+import News from "./pages/News";
+import Services from "./pages/Services";
+import Work from "./pages/Work";
+
 
 function App() {
   return (
     <div className="wrapper">
       <div className="content">
         <Header />
-        <About />
-        <We />
-        <Our />
-        <Service />
-        <Browse />
-        <Support />
-        <Clients />
-        <Some />
-        <News />
-        <ContactForm />
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about-us" element={<AboutUs/>}/>
+          <Route path="/contacts" element={<Contacts/>}/>
+          <Route path="/news" element={<News/>}/>
+          <Route path="/services" element={<Services/>}/>
+          <Route path="/work" element={<Work/>}/>
+        </Routes>
       </div>
       <Footer />
     </div>
