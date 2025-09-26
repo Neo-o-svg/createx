@@ -1,0 +1,26 @@
+:root {
+  /* Colors */
+  --white: #fff;
+  --gray-800: #424551;
+  --gray-900: #1e212c;
+  --gray-700: #787a80;
+  --gray-600: #9a9ca5;
+  --gray-400: #d7dadd;
+  --gray-300: #E5E8ED;
+  --gray-200: #f4f5f6;
+  --orange: #ff5a30;
+  --warning: #f89828;
+  --pink: #f52f6e;
+  --blue: #5a87fc;
+  --green: #03cea4;
+  --bg-color: #1e212c;
+  --black: #000;
+
+  /* Font Family */
+  --font-family-base: "Ubuntu", sans-serif;
+  --bebas-neue: "Bebas Neue";
+
+  /* Container */
+  --container-width: 1230px; /* максимальная ширина для больших экранов */
+  --container-padding-x: 15px; /* внутренние отступы слева и справа */
+}

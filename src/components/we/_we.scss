@@ -1,0 +1,111 @@
+@use "./../../styles/mixins" as mix;
+
+.we {
+  padding-top: 150px;
+  padding-bottom: 90px;
+}
+
+.we-top {
+  margin-bottom: 60px;
+}
+
+.we__video a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.we__video {
+  position: relative;
+  height: 500px;
+  background: red;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    & .we__bg {
+      transform: scale(1.03);
+    }
+
+    & .we__play::before {
+      transform: scale(0.9);
+    }
+  }
+}
+.we__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#1e212c, 0.6);
+    border-radius: 4px;
+  }
+}
+.we__play {
+  @include mix.abs-center();
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-41%, 50%);
+    width: 19px;
+    height: 22px;
+    background-image: url("../img/icons/play.svg");
+  }
+}
+.we__sound {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(#fff, 0.12);
+  &::before,
+  &::after {
+    @include mix.abs-center();
+    content: "";
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icons/sound-icn-white.png");
+    transition: all 0.5s ease;
+  }
+
+  &::after {
+    background-image: url("../img/icons/sound-icn-mute.svg");
+    opacity: 0;
+  }
+}

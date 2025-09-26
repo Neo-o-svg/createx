@@ -1,0 +1,22 @@
+@use "normalize";
+@use "fonts";
+@use "mixins";
+@use "variables";
+@use "utils";
+@use "globals";
+
+@use "./../components/header/header.scss";
+@use "./../components/about/about.scss";
+@use "./../components/we/we.scss";
+@use "./../components/our/our.scss";
+@use "./../components/service/service.scss";
+@use "./../components/browse/browse.scss";
+@use "./../components/support/support.scss";
+@use "./../components/clients/clients.scss";
+@use "./../components/some/some.scss";
+@use "./../components/news/news.scss";
+@use "./../components/сontactForm/сontactForm.scss";
+@use "./../components/footer/footer.scss";
+
+
+@use "media";
