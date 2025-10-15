@@ -1,12 +1,61 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
+import BrowseSlider from "../BrowseSlider/BrowseSlider";
 
-// Стили Swiper
-import "swiper/css";
-import "swiper/css/navigation";
+const slidesData = [
+  {
+    img: "/img/sbs-i-1.jpg",
+    alt: "Red finger building",
+    title: "Red Finger Building",
+    descr: "Business Centers",
+    link: "/work/red-finger",
+  },
+  {
+    img: "/img/sbs-i-2.jpg",
+    alt: "Cubes building",
+    title: "Cubes Building",
+    descr: "Business Centers",
+    link: "/work/cubes",
+  },
+  {
+    img: "/img/sbs-i-1.jpg",
+    alt: "Pencil building",
+    title: "The Pencil Building",
+    descr: "Stores & Malls",
+    link: "/work/pencil",
+  },
+  {
+    img: "/img/sbs-i-2.jpg",
+    alt: "Cubes building",
+    title: "Cubes Building",
+    descr: "Business Centers",
+    link: "/work/cubes",
+  },
+  {
+    img: "/img/sbs-i-1.jpg",
+    alt: "Pencil building",
+    title: "The Pencil Building",
+    descr: "Stores & Malls",
+    link: "/work/pencil",
+  },
+  {
+    img: "/img/sbs-i-2.jpg",
+    alt: "Cubes building",
+    title: "Cubes Building",
+    descr: "Business Centers",
+    link: "/work/cubes",
+  },
+  {
+    img: "/img/sbs-i-1.jpg",
+    alt: "Pencil building",
+    title: "The Pencil Building",
+    descr: "Stores & Malls",
+    link: "/work/pencil",
+  },
+];
 
 export default function Browse() {
+  const navigate = useNavigate();
   return (
     <section className="browse">
       <div className="browse-top default-top">
@@ -22,129 +71,14 @@ export default function Browse() {
         </div>
       </div>
 
-      <div className="browse-slider">
-        <Swiper
-          modules={[Navigation]}
-          navigation={{
-            nextEl: ".browse .swiper-button-next-custom",
-            prevEl: ".browse .swiper-button-prev-custom",
-          }}
-          slidesPerView={"auto"}
-          spaceBetween={15}
-          loop={false}
-          breakpoints={{
-            992: { // > 900
-              spaceBetween: 30,
-               slidesPerView: 3,
-            }
-          }}
-        >
-          {/* Слайды */}
-          <SwiperSlide>
-            <div className="browse__slider-item">
-              <div className="browse__slider-img">
-                <img src="/src/img/sbs-i-1.jpg" alt="Red finger building" />
-              </div>
-              <div className="browse__slider-text">
-                <span className="browse__slider-t-hdr">
-                  Red Finger Building
-                </span>
-                <span className="browse__slider-t-descr">Business Centers</span>
-                <a href="!#" className="btn outline">
-                  View Project
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="browse__slider-item">
-              <div className="browse__slider-img">
-                <img src="/src/img/sbs-i-2.jpg" alt="Cubes building" />
-              </div>
-              <div className="browse__slider-text">
-                <span className="browse__slider-t-hdr">Cubes Building</span>
-                <span className="browse__slider-t-descr">Business Centers</span>
-                <a href="!#" className="btn outline">
-                  View Project
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="browse__slider-item">
-              <div className="browse__slider-img">
-                <img src="/src/img/sbs-i-1.jpg" alt="Pencil building" />
-              </div>
-              <div className="browse__slider-text">
-                <span className="browse__slider-t-hdr">
-                  The Pencil Building
-                </span>
-                <span className="browse__slider-t-descr">Stores & Malls</span>
-                <a href="!#" className="btn outline">
-                  View Project
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="browse__slider-item">
-              <div className="browse__slider-img">
-                <img src="/src/img/sbs-i-1.jpg" alt="Red finger building" />
-              </div>
-              <div className="browse__slider-text">
-                <span className="browse__slider-t-hdr">
-                  Red Finger Building
-                </span>
-                <span className="browse__slider-t-descr">Business Centers</span>
-                <a href="!#" className="btn outline">
-                  View Project
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="browse__slider-item">
-              <div className="browse__slider-img">
-                <img src="/src/img/sbs-i-2.jpg" alt="Cubes building" />
-              </div>
-              <div className="browse__slider-text">
-                <span className="browse__slider-t-hdr">Cubes Building</span>
-                <span className="browse__slider-t-descr">Business Centers</span>
-                <a href="!#" className="btn outline">
-                  View Project
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="browse__slider-item">
-              <div className="browse__slider-img">
-                <img src="/src/img/sbs-i-1.jpg" alt="Pencil building" />
-              </div>
-              <div className="browse__slider-text">
-                <span className="browse__slider-t-hdr">
-                  The Pencil Building
-                </span>
-                <span className="browse__slider-t-descr">Stores & Malls</span>
-                <a href="!#" className="btn outline">
-                  View Project
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div>
+      <BrowseSlider slidesData={slidesData} />
 
       <div className="service-bottom-btm default-btm">
         <div className="container flex">
           <span className="h3">Explore all our works</span>
-          <a href="#" className="btn orange">
-            View portfolio
-          </a>
+          <button className="btn orange" onClick={() => navigate("/work")}>
+            View Project
+          </button>
         </div>
       </div>
     </section>

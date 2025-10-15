@@ -1,7 +1,7 @@
 @use "./../../styles/mixins" as mix;
 
 .service {
-  background: url("/src/img/services.jpg") 50% no-repeat;
+  background: url("/img/services.jpg") 50% no-repeat;
   background-size: cover;
   padding-top: 214px;
   padding-bottom: 81px;
@@ -131,9 +131,4 @@
   font-size: 20px;
 }
 
-.h3 {
-}
-.btn {
-}
-.orange {
-}
+

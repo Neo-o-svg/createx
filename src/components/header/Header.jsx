@@ -1,39 +1,45 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <header className="header">
+    <header
+      className={`header ${
+        location.pathname === "/" ? "" : "header--transparent"
+      }`}
+    >
       <div className="container">
         <div className="header__wrapper">
           <div className="header__left">
             <Link className="header__logo" to="/">
-              <img src="src/img/icons/logo.svg" alt="Createx" />
+              <img src="/img/icons/logo.svg" alt="Createx" />
             </Link>
 
             <nav className="header__nav">
               <ul className="header__nav-list">
                 <li>
-                  <Link to="/about-us">About Us</Link>
+                  <NavLink to="/about-us">About Us</NavLink>
                 </li>
                 <li>
-                  <Link to="/services">Services</Link>
+                  <NavLink to="/services">Services</NavLink>
                 </li>
                 <li>
-                  <Link to="work" href="!#">
+                  <NavLink to="work" href="!#">
                     Work
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="news">News</Link>
+                  <NavLink to="news">News</NavLink>
                 </li>
                 <li>
-                  <Link to="contacts">Contacts</Link>
+                  <NavLink to="contacts">Contacts</NavLink>
                 </li>
               </ul>
             </nav>
@@ -63,35 +69,43 @@ export default function Header() {
           <div className={`header__menu ${menuOpen ? "active" : ""}`}>
             <div className="header__menu-top">
               <Link to="/" className="header__logo">
-                <img src="src/img/icons/logo-white.svg" alt="Createx" />
+                <img src="/img/icons/logo-white.svg" alt="Createx" />
               </Link>
               <div className="header__icons">
                 <a href="tel:4055550128">
-                  <img src="src/img/icons/iPhone.svg" alt="phone" />
+                  <img src="/img/icons/iPhone.svg" alt="phone" />
                 </a>
                 <a href="mailto:hello@createx.com">
-                  <img src="src/img/icons/Chat.svg" alt="chat" />
+                  <img src="/img/icons/Chat.svg" alt="chat" />
                 </a>
               </div>
             </div>
             <nav className="header__menu-nav">
               <ul>
                 <li>
-                  <Link to="/about-us">About Us</Link>
+                  <NavLink to="/about-us" onClick={() => setMenuOpen(false)}>
+                    About Us
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/services">Services</Link>
+                  <NavLink to="/services" onClick={() => setMenuOpen(false)}>
+                    Services
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="work" href="!#">
+                  <NavLink to="/work" onClick={() => setMenuOpen(false)}>
                     Work
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="news">News</Link>
+                  <NavLink to="/news" onClick={() => setMenuOpen(false)}>
+                    News
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="contacts">Contacts</Link>
+                  <NavLink to="/contacts" onClick={() => setMenuOpen(false)}>
+                    Contacts
+                  </NavLink>
                 </li>
               </ul>
             </nav>

@@ -1,0 +1,80 @@
+.our-benefits {
+  background: var(--gray-900);
+  & .h2 {
+    color: var(--white);
+  }
+  padding-top: 80px;
+  padding-bottom: 46px;
+}
+
+.our-benefits-top {
+  margin-bottom: 60px;
+}
+
+.our-benefits__items {
+  margin-bottom: 80px;
+
+  &.flex {
+    gap: 84px;
+    justify-content: center;
+  }
+}
+.our-benefits__item {
+  color: var(--white);
+  min-width: 285px;
+  width: 100%;
+  flex: 1;
+  position: relative;
+
+  &:not(:last-child) {
+    padding-right: 94px;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80%;
+    top: 0;
+    right: 0;
+    background-image: url("/img/icons/benefits-divider.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.our-benefits__img-wrapper {
+  margin-bottom: 24px;
+  &.flex {
+    justify-content: center;
+  }
+}
+
+.our-benefits__content {
+  text-align: center;
+}
+.our-benefits__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+.our-benefits__text {
+  color: var(--white);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  opacity: 0.6;
+}
+
+.our-benefits__btn-wrapper {
+  position: relative;
+  bottom: -60px;
+
+  &.flex {
+    justify-content: center;
+  }
+}
+.our-benefits__btn {
+  width: 360px;
+}

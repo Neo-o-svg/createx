@@ -1,17 +1,7 @@
 @use "mixins" as mix;
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
 .content {
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex: 0 0 auto;
+  min-height: 100vh;
 }
 
 .container {
@@ -24,6 +14,10 @@
 
 .grid {
   display: grid;
+}
+
+.gray-bg{
+  background: var(--gray-200);
 }
 
 .default-top {
@@ -292,30 +286,30 @@
   left: 32px;
   &.orange {
     &::before {
-      background-image: url("src/img/icons/arrow-prev_white.svg");
+      background-image: url("/img/icons/arrow-prev_white.svg");
     }
 
     &::after {
-      background-image: url("src/img/icons/left-arrow.svg");
+      background-image: url("/img/icons/left-arrow.svg");
     }
   }
 
   &.gray {
     &::before {
-      background-image: url("src/img/icons/left-arrow.svg");
+      background-image: url("/img/icons/left-arrow.svg");
     }
 
     &::after {
-      background-image: url("src/img/icons/arrow-prev_white.svg");
+      background-image: url("/img/icons/arrow-prev_white.svg");
     }
   }
 
   &::before {
-    background-image: url("src/img/icons/left-arrow.svg");
+    background-image: url("/img/icons/left-arrow.svg");
   }
 
   &::after {
-    background-image: url("src/img/icons/arrow-prev-orange.svg");
+    background-image: url("/img/icons/arrow-prev-orange.svg");
   }
 }
 
@@ -324,30 +318,30 @@
 
   &.orange {
     &::before {
-      background-image: url("src/img/icons/arrow-next_white.svg");
+      background-image: url("/img/icons/arrow-next_white.svg");
     }
 
     &::after {
-      background-image: url("src/img/icons/right-arrow.svg");
+      background-image: url("/img/icons/right-arrow.svg");
     }
   }
 
   &.gray {
     &::before {
-      background-image: url("src/img/icons/right-arrow.svg");
+      background-image: url("/img/icons/right-arrow.svg");
     }
 
     &::after {
-      background-image: url("src/img/icons/arrow-next_white.svg");
+      background-image: url("/img/icons/arrow-next_white.svg");
     }
   }
 
   &::before {
-    background-image: url("src/img/icons/right-arrow.svg");
+    background-image: url("/img/icons/right-arrow.svg");
   }
 
   &::after {
-    background-image: url("src/img/icons/arrow-next-orange.svg");
+    background-image: url("/img/icons/arrow-next-orange.svg");
   }
 }
 

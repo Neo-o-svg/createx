@@ -1,5 +1,5 @@
 // import React from "react";
-// import bgImage from "../../img/swa-bg.jpg";
+// import bgImage from "/img/swa-bg.jpg";
 // import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 // import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
@@ -30,7 +30,7 @@
 //   );
 // }
 import React, { useEffect } from "react";
-import bgImage from "../../img/swa-bg.jpg";
+import bgImage from "/img/swa-bg.jpg";
 import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 

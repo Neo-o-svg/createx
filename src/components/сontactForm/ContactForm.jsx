@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../../img/form-selction.jpg";
+import bgImage from "/img/form-selction.jpg";
 
 export default function ContactForm() {
   return (
@@ -13,7 +13,7 @@ export default function ContactForm() {
           <h2 className="contactForm__title">A quick way to discuss details</h2>
           <form>
             <div>
-              <label for="name">Name*</label>
+              <label htmlFor="name">Name*</label>
               <input
                 type="text"
                 id="name"
@@ -24,7 +24,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label for="phone">Phone*</label>
+              <label htmlFor="phone">Phone*</label>
               <input
                 type="tel"
                 id="phone"
@@ -35,7 +35,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -45,7 +45,7 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label for="message">Message*</label>
+              <label htmlFor="message">Message*</label>
               <textarea
                 id="message"
                 name="user_message"
@@ -55,7 +55,7 @@ export default function ContactForm() {
             </div>
             <div className="checkbox-input">
               <input type="checkbox" id="agreement" name="agreement" />
-              <label for="agreement">
+              <label htmlFor="agreement">
                 I agree to receive communications from Createx Construction
                 Bureau.
               </label>

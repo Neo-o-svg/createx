@@ -1,0 +1,18 @@
+.services-cards{
+    padding-top: 120px;
+    padding-bottom: 180px;
+    position: relative;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 531px;
+        right: 0;
+        width: 791px;
+        height: 638px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('/img/services-cards-bg.png');
+    }
+}

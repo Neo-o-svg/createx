@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Our() {
   return (
-    <section className="our">
+    <section className="our gray-bg">
       <div className="container">
         <div className="default-top our-top">
           <div className="container">
@@ -19,7 +19,7 @@ export default function Our() {
         <div className="container flex">
           <div className="our__item">
             <div className="our__item-img">
-              <img src="src/img/icons/so_1.svg" alt="quality" />
+              <img src="/img/icons/so_1.svg" alt="quality" />
             </div>
             <span className="our__item-header">Quality</span>
             <p className="our__item-text">
@@ -29,7 +29,7 @@ export default function Our() {
           </div>
           <div className="our__item">
             <div className="our__item-img">
-              <img src="src/img/icons/so_2.svg" alt="safety" />
+              <img src="/img/icons/so_2.svg" alt="safety" />
             </div>
             <span className="our__item-header">Safety</span>
             <p className="our__item-text">
@@ -39,7 +39,7 @@ export default function Our() {
           </div>
           <div className="our__item">
             <div className="our__item-img">
-              <img src="src/img/icons/so_3.svg" alt="comfort" />
+              <img src="/img/icons/so_3.svg" alt="comfort" />
             </div>
             <span className="our__item-header">Comfort</span>
             <p className="our__item-text">

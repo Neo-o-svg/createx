@@ -1,0 +1,74 @@
+@use "./../../styles/mixins" as mix;
+
+.our-our-work-cards-cards {
+  position: relative;
+  top: -50px;
+  margin-bottom: 60px;
+  & .flex {
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.our-work-cards__item {
+  @include mix.flex-center();
+  flex-direction: column;
+  background: var(--white);
+  transition: all 0.5s ease;
+  width: 230px;
+  height: 154px;
+  padding: 32px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
+
+  &:hover {
+    background: var(--orange);
+
+    & img:nth-child(1) {
+      opacity: 0;
+    }
+    & img:nth-child(2) {
+      opacity: 1;
+    }
+
+    & .our-work-cards__item-header {
+      color: var(--white);
+    }
+  }
+}
+.our-work-cards__item-img {
+  position: relative;
+  margin-bottom: 16px;
+
+  & img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    transition: all 0.5s ease;
+
+    display: block;
+    max-width: 100%;
+    transition: all 0.5s ease;
+
+    &:nth-child(2) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
+}
+.our-work-cards__item-header {
+  color: var(--gray-600);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  transition: all 0.5s ease;
+}

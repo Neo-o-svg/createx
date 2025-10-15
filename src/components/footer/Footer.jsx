@@ -1,17 +1,17 @@
 import React from "react";
 
-import Logo from "../../img/icons/logo-white.svg";
-import WhatsApp from "../../img/icons/whatsapp.svg";
-import WhatsApp_orange from "../../img/icons/whatsapp-orange.svg";
-import Messanger from "../../img/icons/messanger.svg";
-import Messanger_orange from "../../img/icons/messanger-orange.svg";
-import Facebook from "../../img/icons/facebook.svg";
-import Facebook_orange from "../../img/icons/facebook-orange.svg";
-import Twitter from "../../img/icons/twitter.svg";
-import Twitter_orange from "../../img/icons/twitter-orange.svg";
-import YouTube from "../../img/icons/youtube.svg";
-import YouTube_orange from "../../img/icons/youtube-orange.svg";
-import Heart from "../../img/icons/heart.svg";
+import Logo from "/img/icons/logo-white.svg";
+import WhatsApp from "/img/icons/whatsapp.svg";
+import WhatsApp_orange from "/img/icons/whatsapp-orange.svg";
+import Messanger from "/img/icons/messanger.svg";
+import Messanger_orange from "/img/icons/messanger-orange.svg";
+import Facebook from "/img/icons/facebook.svg";
+import Facebook_orange from "/img/icons/facebook-orange.svg";
+import Twitter from "/img/icons/twitter.svg";
+import Twitter_orange from "/img/icons/twitter-orange.svg";
+import YouTube from "/img/icons/youtube.svg";
+import YouTube_orange from "/img/icons/youtube-orange.svg";
+import Heart from "/img/icons/heart.svg";
 
 export default function Footer() {
   return (
@@ -179,7 +179,7 @@ export default function Footer() {
                 aria-label="Your email address"
                 required
               />
-              <a href="!#" class="btn orange">
+              <a href="!#" className="btn orange">
                 subscribe
               </a>
             </form>

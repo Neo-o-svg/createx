@@ -1,0 +1,47 @@
+.word-map {
+  background: var(--gray-200);
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.word-map__wrapper {
+  & .container {
+    position: relative;
+  }
+}
+
+.canada,
+.usa,
+.germany,
+.ukraine,
+.china,
+.australia {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.canada {
+  top: 21%;
+  left: 13%;
+}
+.usa {
+  top: 37%;
+  left: 18%;
+}
+.germany {
+  top: 26%;
+  left: 48%;
+}
+.ukraine {
+  top: 30%;
+  left: 52%;
+}
+.china {
+  top: 41%;
+  right: 25%;
+}
+.australia {
+  bottom: 18%;
+  right: 17%;
+}

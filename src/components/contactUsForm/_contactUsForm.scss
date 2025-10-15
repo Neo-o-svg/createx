@@ -1,0 +1,151 @@
+.contact-us {
+  margin-top: 200px;
+  margin-bottom: 122px;
+}
+
+
+.contact-us-top {
+  margin-bottom: 60px;
+}
+
+.contact-us-form__wrapper {
+  & .container.flex {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.contact-us-form__img {
+  & img {
+    border-radius: 4px;
+    width: 495px;
+    height: 586px;
+  }
+}
+
+.contact-us-form__group {
+  margin-bottom: 24px;
+
+  &.flex {
+    column-gap: 30px;
+  }
+
+  & label {
+    color: var(--gray-800);
+    font-size: 16px;
+    line-height: 160%;
+    display: block;
+  }
+  & input {
+    border-radius: 4px;
+    border: 1px solid var(--gray-400);
+    background: var(--gray-200);
+    width: 285px;
+    padding: 10px 16px;
+    color: var(--gray-600);
+    font-size: 16px;
+    line-height: 160%;
+    outline: none;
+  }
+
+  & select {
+    border-radius: 4px;
+    border: 1px solid var(--gray-400);
+    background: var(--gray-200);
+    width: 285px;
+    padding: 12px 16px;
+  }
+
+  & option {
+    color: var(--gray-800);
+    font-size: 16px;
+    line-height: 160%;
+  }
+}
+.contact-us-form__inputs-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  padding: 15px 10px;
+
+  & input {
+    display: none;
+  }
+  & label {
+    position: relative;
+    margin-left: 10px;
+    transition: all 0.5s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    &::before {
+      border: 1px solid var(--gray-500);
+      width: 16px;
+      height: 16px;
+      top: 5px;
+      left: -25px;
+    }
+
+    &::after {
+      border: 1px solid var(--orange);
+      background-color: var(--orange);
+      width: 8px;
+      height: 8px;
+      top: 9px;
+      left: -21px;
+      opacity: 0;
+    }
+
+    &.active {
+      &::before {
+        border: 1px solid var(--orange);
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.contact-us__textarea {
+    margin-bottom: 40px;
+  & textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--gray-400);
+    background: var(--gray-200);
+    padding: 13px 16px;
+    height: 128px;
+    outline: none;
+
+    &::placeholder {
+      color: var(--gray-600);
+      font-size: 16px;
+      line-height: 160%; 
+    }
+  }
+}
+.contact-us-form__bottom {
+    &.flex {
+        justify-content: space-between;
+    }
+
+    & .checkbox-input {
+        width: 300px;
+    }
+
+    & .btn {
+        width: 210px;
+        height: 52px;
+    }
+}
+
+
+
+

@@ -9,7 +9,10 @@ import Contacts from "./pages/Contacts";
 import News from "./pages/News";
 import Services from "./pages/Services";
 import Work from "./pages/Work";
-
+import NotFound from "./components/404/NotFound";
+import InteriorDesign from "./pages/InteriorDesign";
+import AvailablePositions from "./pages/AvailablePositions";
+import ModernCottage from "./pages/ModernCottage";
 
 function App() {
   return (
@@ -17,12 +20,16 @@ function App() {
       <div className="content">
         <Header />
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about-us" element={<AboutUs/>}/>
-          <Route path="/contacts" element={<Contacts/>}/>
-          <Route path="/news" element={<News/>}/>
-          <Route path="/services" element={<Services/>}/>
-          <Route path="/work" element={<Work/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="about-us/available-positions" element={<AvailablePositions/>} />
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="news" element={<News />} />
+          <Route path="services" element={<Services />} />
+          <Route path="services/interior-design" element={<InteriorDesign />} />
+          <Route path="work" element={<Work />} />
+          <Route path="work/modern-cottage" element={<ModernCottage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />

@@ -1,9 +1,24 @@
 .support {
   background-color: var(--gray-200);
-  padding: 81px 0;
+
+  &.pad-sm {
+    padding: 81px 0;
+  }
+
+  &.pad-bg {
+    padding-top: 180px;
+    padding-bottom: 92px;
+  }
 }
+
 .support-top {
   margin-bottom: 60px;
+}
+
+.support-slider {
+  & .swiper-slide {
+    width: auto;
+  }
 }
 .support-slider__logo {
   &:hover img {
@@ -13,6 +28,6 @@
     display: block;
     max-width: 100%;
     filter: grayscale(1);
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
 }

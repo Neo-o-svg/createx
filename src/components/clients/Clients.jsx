@@ -37,7 +37,7 @@ export default function Clients() {
                     <span
                       className="scl-photo"
                       style={{
-                        backgroundImage: 'url("/src/img/icons/client.png")',
+                        backgroundImage: 'url("/img/icons/client.png")',
                       }}
                     ></span>
                   </div>
@@ -57,7 +57,7 @@ export default function Clients() {
                     <span
                       className="scl-photo"
                       style={{
-                        backgroundImage: 'url("/src/img/icons/client.png")',
+                        backgroundImage: 'url("/img/icons/client.png")',
                       }}
                     ></span>
                   </div>
@@ -77,7 +77,7 @@ export default function Clients() {
                     <span
                       className="scl-photo"
                       style={{
-                        backgroundImage: 'url("/src/img/icons/client.png")',
+                        backgroundImage: 'url("/img/icons/client.png")',
                       }}
                     ></span>
                   </div>
@@ -110,7 +110,7 @@ export default function Clients() {
               <SwiperSlide className="swiper-slide">
                 <div className="src-photo">
                   <img
-                    src="/src/img/scr-slider-photo.jpg"
+                    src="/img/scr-slider-photo.jpg"
                     alt="slide photo"
                     className="scr-img"
                   />
@@ -119,7 +119,7 @@ export default function Clients() {
               <SwiperSlide className="swiper-slide">
                 <div className="src-photo">
                   <img
-                    src="/src/img/scr-slider-photo.jpg"
+                    src="/img/scr-slider-photo.jpg"
                     alt="slide photo"
                     className="scr-img"
                   />
@@ -128,7 +128,7 @@ export default function Clients() {
               <SwiperSlide className="swiper-slide">
                 <div className="src-photo">
                   <img
-                    src="/src/img/scr-slider-photo.jpg"
+                    src="/img/scr-slider-photo.jpg"
                     alt="slide photo"
                     className="scr-img"
                   />

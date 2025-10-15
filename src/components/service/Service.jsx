@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import Inputmask from "inputmask";
+import { useNavigate } from "react-router-dom";
 
 export default function Service() {
   const phoneRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (phoneRef.current) {
@@ -55,17 +57,17 @@ export default function Service() {
           <div className="service__item">
             <span
               className="service__i-hover"
-              style={{ backgroundImage: "url('/src/img/ss-i-hover.jpg')" }}
+              style={{ backgroundImage: "url('/img/ss-i-hover.jpg')" }}
             ></span>
 
             <div className="service__item-img">
               <img
-                src="src/img/icons/ic-construction.svg"
+                src="/img/icons/ic-construction.svg"
                 alt="Construction"
                 className="service__item-img"
               />
               <img
-                src="src/img/icons/ic-construction-white.svg"
+                src="/img/icons/ic-construction-white.svg"
                 alt="Construction white"
                 className="service__item-img"
               />
@@ -75,17 +77,17 @@ export default function Service() {
           <div className="service__item">
             <span
               className="service__i-hover"
-              style={{ backgroundImage: "url('/src/img/ss-i-hover.jpg')" }}
+              style={{ backgroundImage: "url('/img/ss-i-hover.jpg')" }}
             ></span>
 
             <div className="service__item-img">
               <img
-                src="src/img/icons/ic-plan.svg"
+                src="/img/icons/ic-plan.svg"
                 alt="Project Development"
                 className="service__item-img"
               />
               <img
-                src="src/img/icons/ic-plan-white.svg"
+                src="/img/icons/ic-plan-white.svg"
                 alt="Project Development white"
                 className="service__item-img"
               />
@@ -95,17 +97,17 @@ export default function Service() {
           <div className="service__item">
             <span
               className="service__i-hover"
-              style={{ backgroundImage: "url('/src/img/ss-i-hover.jpg')" }}
+              style={{ backgroundImage: "url('/img/ss-i-hover.jpg')" }}
             ></span>
 
             <div className="service__item-img">
               <img
-                src="src/img/icons/ic-pantone-orange.svg"
+                src="/img/icons/ic-pantone-orange.svg"
                 alt="Interior Design orange"
                 className="service__item-img"
               />
               <img
-                src="src/img/icons/ic-pantone-white.svg"
+                src="/img/icons/ic-pantone-white.svg"
                 alt="Interior Design"
                 className="service__item-img"
               />
@@ -115,17 +117,17 @@ export default function Service() {
           <div className="service__item">
             <span
               className="service__i-hover"
-              style={{ backgroundImage: "url('/src/img/ss-i-hover.jpg')" }}
+              style={{ backgroundImage: "url('/img/ss-i-hover.jpg')" }}
             ></span>
 
             <div className="service__item-img">
               <img
-                src="src/img/icons/ic-painting.svg"
+                src="/img/icons/ic-painting.svg"
                 alt="Repairs"
                 className="service__item-img"
               />
               <img
-                src="src/img/icons/ic-painting-white.svg"
+                src="/img/icons/ic-painting-white.svg"
                 alt="Repairs white"
                 className="service__item-img"
               />
@@ -138,9 +140,9 @@ export default function Service() {
       <div className="service__btm default-btm ">
         <div className="container flex">
           <span className="h3">Learn more about our services</span>
-          <a href="!#" className="btn orange">
+          <button className="btn orange" onClick={() => navigate("/services")}>
             View services
-          </a>
+          </button>
         </div>
       </div>
     </section>

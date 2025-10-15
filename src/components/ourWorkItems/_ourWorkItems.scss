@@ -1,0 +1,42 @@
+$load-img: url("/img/icons/loading.svg");
+
+
+.our-work-items {
+  padding-bottom: 100px;
+  padding-top: 120px;
+}
+
+.our-work-items__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+  gap: 30px;
+}
+
+.load-more {
+  padding-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.load-more__text {
+  color: var(--gray-800);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 160%; 
+  position: relative;
+  display: inline-block;
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -40px;
+    background-image: $load-img;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 21px;
+    height: 20px;
+
+  }
+}

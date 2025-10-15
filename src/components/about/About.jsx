@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
-import bgImage from "../../img/swipper/bg-image.jpg";
+import bgImage from "/img/swipper/bg-image.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 
 import "swiper/css";
 
@@ -10,6 +11,7 @@ export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = [1, 2, 3, 4]; // можно заменить на реальные данные
+  const navigate = useNavigate();
 
   return (
     <section className="about">
@@ -48,9 +50,12 @@ export default function About() {
                       ipsum elementum felis.
                     </p>
                     <div className="swipper__btn-wrap">
-                      <a href="!#" className="btn">
+                      <button
+                        className="btn"
+                        onClick={() => navigate("/about-us")}
+                      >
                         Learn more about us
-                      </a>
+                      </button>
                       <a href="!#" className="btn orange">
                         SUBMIT REQUEST
                       </a>

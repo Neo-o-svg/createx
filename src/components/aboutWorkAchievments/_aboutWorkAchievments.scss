@@ -1,0 +1,39 @@
+@use "../../styles/mixins" as mix;
+
+.about-achievments {
+  padding-top: 100px;
+
+}
+
+.about-achievments__items-wrapper {
+  &.flex {
+    row-gap: 60px;
+    flex-wrap: wrap;
+  }
+}
+.about-achievments__item {
+  @include mix.flex-center();
+  flex-direction: column;
+  padding: 0 10px;
+  flex: 1;
+  text-align: center;
+  min-width: 251px;
+}
+.about-achievments__img-wrapper {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+}
+.about-achievments__title {
+  color: var(--orange);
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 8px;
+}
+.about-achievments__text {
+  color: var(--gray-900);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}

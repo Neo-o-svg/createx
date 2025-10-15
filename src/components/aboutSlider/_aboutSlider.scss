@@ -1,0 +1,98 @@
+.about-slider {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 791px;
+    height: 638px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/img/services-cards-bg.png");
+  }
+
+  & .container {
+    position: relative;
+  }
+}
+
+.as-left {
+  padding-top: 120px;
+}
+
+.image-slider__img {
+  width: 525px;
+  height: 580px;
+}
+
+.as-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.comment-slider {
+  & .swiper {
+    width: 735px;
+    height: 570px;
+    /* shadow/small */
+    box-shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08),
+      0 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0 4px 4px -4px rgba(30, 33, 44, 0.03);
+  }
+  & .swiper-slide {
+    border-radius: 4px;
+    background: var(--white);
+    padding: 80px 105px 80px 135px;
+  }
+}
+
+.comment-slider__content {
+  margin-bottom: 60px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 20px;
+    background-image: url("/img/icons/braces.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: -50px;
+  }
+}
+.comment-slider__top {
+  color: var(--gray-900);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.comment-slider__text1 {
+  margin-bottom: 30px;
+}
+
+.comment-slider__bottom {
+  &.flex {
+    justify-content: space-between;
+  }
+}
+
+.comment-slider__name {
+  color: var(--gray-900);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 160%;
+}
+.comment-slider__status {
+  color: var(--gray-700);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.comment-slider__signtr {
+}
